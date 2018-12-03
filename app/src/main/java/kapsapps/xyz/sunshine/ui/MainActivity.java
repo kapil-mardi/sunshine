@@ -1,11 +1,11 @@
 package kapsapps.xyz.sunshine.ui;
 
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
-import java.util.List;
-
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import kapsapps.xyz.sunshine.R;
 import kapsapps.xyz.sunshine.model.Weather;
 import kapsapps.xyz.sunshine.service.ServiceAPI;
@@ -18,11 +18,20 @@ import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.view_toolbar)
+    Toolbar mToolbar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+        mToolbar.setTitle(R.string.appTitle);
+        setSupportActionBar(mToolbar);
     }
+
 
     @Override
     protected void onResume() {
