@@ -9,6 +9,6 @@ import retrofit2.http.Query;
 
 public interface ServiceAPI {
 
-    @GET("data/2.5/forecast?id=524901&APPID={APIKEY}")
-    Call<List<Weather>> getWeatherList(@Query("APIKEY") String apiKey);
+    @GET("data/2.5/weather")
+    Call<Weather> getWeatherDataForCity(@Query("q") String cityName, @Query("APPID") String apiKey);
 }

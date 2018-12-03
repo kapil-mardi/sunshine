@@ -10,6 +10,7 @@ import kapsapps.xyz.sunshine.R;
 import kapsapps.xyz.sunshine.model.Weather;
 import kapsapps.xyz.sunshine.service.ServiceAPI;
 import kapsapps.xyz.sunshine.service.ServiceProvider;
+import kapsapps.xyz.sunshine.utils.Constants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,19 +28,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        Timber.tag("device id ").d(Settings.Secure.getString(getApplicationContext().getContentResolver(),Settings.Secure.ANDROID_ID));
 
         ServiceAPI serviceAPI = ServiceProvider.getInstance().getServiceAPI();
-        Call<List<Weather>> data = serviceAPI.getWeatherList("21c469cedc1c1e96df08d86fc2355bbe");
-        data.enqueue(new Callback<List<Weather>>() {
+        Call<Weather> weatherCall = serviceAPI.getWeatherDataForCity("pune",Constants.API_KEY);
+        weatherCall.enqueue(new Callback<Weather>() {
             @Override
-            public void onResponse(Call<List<Weather>> call, Response<List<Weather>> response) {
-                Timber.tag("data").d(response.body().toString());
+            public void onResponse(Call<Weather> call, Response<Weather> response) {
+                Timber.tag("Weather data").d(response.body().toString());
             }
 
             @Override
-            public void onFailure(Call<List<Weather>> call, Throwable t) {
-                Timber.tag("data").d(t.getMessage());
+            public void onFailure(Call<Weather> call, Throwable t) {
+                Timber.tag("Error").d(t.getLocalizedMessage());
             }
         });
     }
