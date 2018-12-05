@@ -2,6 +2,7 @@ package kapsapps.xyz.sunshine.service;
 
 import java.util.List;
 
+import kapsapps.xyz.sunshine.model.ForecastModal;
 import kapsapps.xyz.sunshine.model.Weather;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -11,4 +12,7 @@ public interface ServiceAPI {
 
     @GET("data/2.5/weather")
     Call<Weather> getWeatherDataForCity(@Query("q") String cityName, @Query("APPID") String apiKey);
+
+    @GET("data/2.5/forecast")
+    Call<ForecastModal> getForecastDataForCity(@Query("q") String cityName, @Query("APPID") String apiKey);
 }
