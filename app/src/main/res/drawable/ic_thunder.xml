@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportHeight="32"
+    android:viewportWidth="32">
+
+    <group
+        android:name="back_cloud">
+
+        <path
+            android:strokeColor="#000"
+            android:strokeWidth="1"
+            android:pathData="M5,10C 2.5 2.5 21.5 2.5 19,10
+                              C24,8 24,16 20,18
+                               l-16,0
+                              C0,16 0,8 5,10" />
+
+    </group>
+
+    <group
+        android:name="front_cloud">
+
+        <path
+            android:strokeColor="#000"
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M10,10C 7.5 2.5 26.5 2.5 24,10
+                              C29,8 29,16 25,18
+                               l-16,0
+                              C5,16 5,8 10,10" />
+
+    </group>
+
+    <group
+        android:name="thunder1">
+
+        <path
+            android:strokeColor="#000"
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M8,19l-4 6h2l-4 6z"/>
+
+    </group>
+
+    <group
+        android:name="thunder2">
+
+        <path
+            android:strokeColor="#000"
+            android:strokeWidth="0.5"
+            android:pathData="M15,19l-4 6h2l-4 6z"/>
+
+    </group>
+
+    <group
+        android:name="thunder3">
+
+        <path
+            android:strokeColor="#000"
+            android:fillColor="#000000"
+            android:strokeWidth="1"
+            android:pathData="M22,19l-4 6h2l-4 6z"/>
+
+    </group>
+
+
+</vector>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -46,11 +47,10 @@
             android:layout_weight="0.5"
             android:layout_gravity="center_vertical"    >
 
-            <ImageView
+            <android.support.v7.widget.AppCompatImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:id="@+id/weather_img"
-                android:src="@android:drawable/ic_delete"
                 android:layout_centerInParent="true"/>
         </RelativeLayout>
 

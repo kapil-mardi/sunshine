@@ -3,7 +3,9 @@ package kapsapps.xyz.sunshine.ui;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
+import android.os.Build;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -22,10 +24,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import kapsapps.xyz.sunshine.R;
-import kapsapps.xyz.sunshine.datasource.WeatherViewModal;
-import kapsapps.xyz.sunshine.model.Weather;
 import kapsapps.xyz.sunshine.ui.fragments.CityFragment;
-import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,10 +40,12 @@ public class MainActivity extends AppCompatActivity {
     ViewPagerAdapter mAdapter;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
 
         mTitle.setText(R.string.app_name);
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.addFragment(fragment1);
 
         mAdapter.notifyDataSetChanged();
+
+        View view = mViewPager.getRootView();
 
 
     }

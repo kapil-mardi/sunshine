@@ -1,19 +1,16 @@
 package kapsapps.xyz.sunshine.ui.views;
 
 import android.content.Context;
-import android.content.ContextWrapper;
+import android.graphics.drawable.Animatable;
 import android.support.annotation.NonNull;
+import android.support.graphics.drawable.AnimatedVectorDrawableCompat;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -59,7 +56,7 @@ public class WeatherAdapter extends RecyclerView.Adapter {
         TextView weatherDescription;
 
         @BindView(R.id.weather_img)
-        ImageView weatherImg;
+        AppCompatImageView weatherImg;
 
         public SingleLineViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -84,9 +81,15 @@ public class WeatherAdapter extends RecyclerView.Adapter {
 
             String imageUrl = "http://openweathermap.org/img/w/" + weatherData.getIcon() + ".png";
 
-            Glide.with(mContext)
-                    .load(imageUrl)
-                    .into(weatherImg);
+            /*Glide.with(mContext)
+                    .load(R.drawable.ic_sun)
+                    .into(weatherImg);*/
+            AnimatedVectorDrawableCompat vectorDrawable = AnimatedVectorDrawableCompat.create(mContext,R.drawable.thunder_animated_vector);
+
+            weatherImg.setImageDrawable(vectorDrawable);
+
+            Animatable animatable = (Animatable) weatherImg.getDrawable();
+            animatable.start();
         }
     }
 

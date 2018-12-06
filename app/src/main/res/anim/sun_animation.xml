@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="MissingDefaultResource">
+
+    <objectAnimator
+        android:duration="5000"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:propertyName="rotation"
+        android:repeatMode="restart"
+        android:repeatCount="infinite" />
+
+</set>
