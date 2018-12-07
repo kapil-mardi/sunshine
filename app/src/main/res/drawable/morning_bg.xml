@@ -1,0 +1,45 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="720dp"
+    android:height="1208dp"
+    android:viewportWidth="720"
+    android:viewportHeight="1208">
+
+
+    <group android:name="magachi_baju">
+        <path
+            android:strokeColor="#000"
+            android:pathData="M0,0l720,0l0,1208l-720,0l0,-1208">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="0"
+                    android:endY="0"
+                    android:startX="720"
+                    android:startY="1208"
+                    android:type="linear"
+                    tools:targetApi="n">
+                    <item
+                        android:color="#fb8c00"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#ffcc80"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+
+    <group android:name="chandra">
+        <path
+            android:fillColor="#ff6f00"
+            android:pathData="M200,400A50 50 1 1 1 220,400"/>
+    </group>
+
+    <group android:name="dongar">
+        <path
+            android:fillColor="#ff6f00"
+            android:pathData="M0,800C100,600 100,600 250,800M200,780C500,700 500,700 720,1000v208h-720v-420"/>
+    </group>
+
+</vector>

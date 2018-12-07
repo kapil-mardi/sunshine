@@ -1,0 +1,73 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="720dp"
+    android:height="1208dp"
+    android:viewportWidth="720"
+    android:viewportHeight="1208">
+
+
+    <group android:name="magachi_baju">
+        <path
+            android:strokeColor="#000"
+            android:pathData="M0,0l720,0l0,1208l-720,0l0,-1208">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="0"
+                    android:endY="0"
+                    android:startX="720"
+                    android:startY="1208"
+                    android:type="linear"
+                    tools:targetApi="n">
+                    <item
+                        android:color="#1976d2"
+                        android:offset="0.0" />
+                    <item
+                        android:color="#90caf9"
+                        android:offset="1.0" />
+                </gradient>
+            </aapt:attr>
+        </path>
+    </group>
+
+    <group android:name="magcha_dhag">
+        <path
+            android:fillColor="#55ffffff"
+            android:strokeWidth="1"
+            android:strokeColor="#ffffff"
+            android:pathData="M200,0C150,300 680,500 720,300l0,-300"/>
+    </group>
+
+    <group android:name="pudhcha_dhag">
+        <path
+            android:fillColor="#99ffffff"
+            android:strokeWidth="1"
+            android:strokeColor="#ffffff"
+            android:pathData="M0,300C50,400 450,100 360,0h-360"/>
+    </group>
+
+    <group android:name="chandra">
+        <path
+            android:fillColor="#ffffff"
+            android:pathData="M200,400A50 50 1 1 1 220,400"/>
+    </group>
+
+    <group android:name="dongar">
+        <path
+            android:fillColor="#0277bd"
+            android:pathData="M0,800C100,600 100,600 250,800M200,780C500,700 500,700 720,1000v208h-720v-420"/>
+    </group>
+
+    <group android:name="chandani">
+        <path
+            android:strokeWidth="1"
+            android:strokeColor="#ffffff"
+            android:fillColor="#ffffff"
+            android:pathData="M600,600A5 5 1 1 0 602,602
+                              M400,400A5 5 1 1 0 402,402
+                              M350,300A5 5 1 1 0 352,301
+                              M50,600A5 5 1 1 0 51,602
+                              M75,450A5 5 1 1 0 76,451
+                              M300,600A5 5 1 1 0 301,602"/>
+    </group>
+</vector>
