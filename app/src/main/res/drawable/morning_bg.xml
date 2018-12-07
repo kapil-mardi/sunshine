@@ -20,10 +20,10 @@
                     android:type="linear"
                     tools:targetApi="n">
                     <item
-                        android:color="#fb8c00"
+                        android:color="#e9764a"
                         android:offset="0.0" />
                     <item
-                        android:color="#ffcc80"
+                        android:color="#e0af5e"
                         android:offset="1.0" />
                 </gradient>
             </aapt:attr>
@@ -32,13 +32,13 @@
 
     <group android:name="chandra">
         <path
-            android:fillColor="#ff6f00"
+            android:fillColor="#fefefd"
             android:pathData="M200,400A50 50 1 1 1 220,400"/>
     </group>
 
     <group android:name="dongar">
         <path
-            android:fillColor="#ff6f00"
+            android:fillColor="#9b5031"
             android:pathData="M0,800C100,600 100,600 250,800M200,780C500,700 500,700 720,1000v208h-720v-420"/>
     </group>
 

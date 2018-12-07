@@ -50,7 +50,7 @@ public class ForecastViewModal extends ViewModel {
 
     }
 
-    public MutableLiveData<ForecastModal> getWeatherData(){
+    public MutableLiveData<ForecastModal> getForecastData(){
         return mMutableLiveData;
     }
 

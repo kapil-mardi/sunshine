@@ -67,15 +67,14 @@ public class WeatherAdapter extends RecyclerView.Adapter {
 
             Date dateToShow = new Date();
             dateToShow.setTime(date * 1000);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM\nhh:mm a");
+            //SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM\nhh:mm a");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE\nhh:mm a");
             String dateStr = dateFormat.format(dateToShow);
 
-            double maxTempC = mainInfo.getTemp_max() - 273.15;
-            double minTempC = mainInfo.getTemp_min()- 273.15;
-            double avgTempC = mainInfo.getTemp() - 273.15;
+            int avgTempC = (int) (mainInfo.getTemp() - 273.15);
 
             dateView.setText(dateStr);
-            avgTemp.setText(String.format("%.2f",avgTempC)+ "\u2103");
+            avgTemp.setText(avgTempC + "\u2103");
 
             weatherDescription.setText(weatherData.getMain());
 

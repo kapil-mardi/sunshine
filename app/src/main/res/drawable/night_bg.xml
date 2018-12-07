@@ -20,10 +20,10 @@
                     android:type="linear"
                     tools:targetApi="n">
                     <item
-                        android:color="#1976d2"
+                        android:color="#00c6f0"
                         android:offset="0.0" />
                     <item
-                        android:color="#90caf9"
+                        android:color="#0078af"
                         android:offset="1.0" />
                 </gradient>
             </aapt:attr>
@@ -33,16 +33,14 @@
     <group android:name="magcha_dhag">
         <path
             android:fillColor="#55ffffff"
-            android:strokeWidth="1"
-            android:strokeColor="#ffffff"
+
             android:pathData="M200,0C150,300 680,500 720,300l0,-300"/>
     </group>
 
     <group android:name="pudhcha_dhag">
         <path
             android:fillColor="#99ffffff"
-            android:strokeWidth="1"
-            android:strokeColor="#ffffff"
+
             android:pathData="M0,300C50,400 450,100 360,0h-360"/>
     </group>
 
@@ -52,9 +50,11 @@
             android:pathData="M200,400A50 50 1 1 1 220,400"/>
     </group>
 
+
+
     <group android:name="dongar">
         <path
-            android:fillColor="#0277bd"
+            android:fillColor="#0c425d"
             android:pathData="M0,800C100,600 100,600 250,800M200,780C500,700 500,700 720,1000v208h-720v-420"/>
     </group>
 

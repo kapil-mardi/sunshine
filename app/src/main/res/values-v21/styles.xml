@@ -7,14 +7,7 @@
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
-
-    <style name="morning_theme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/morning_bg</item>
-    </style>
-
-    <style name="night_theme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/night_bg</item>
-    </style>
 </resources>

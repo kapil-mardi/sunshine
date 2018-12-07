@@ -1,23 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.CityFragment"
     android:padding="@dimen/_16dp">
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_20sp"
-        android:id="@+id/city_name"
-        android:text="@string/pune"
-        android:layout_marginBottom="@dimen/_10dp"/>
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sp"
+            android:id="@+id/city_name"
+            android:text="@string/pune"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sp"
+            android:id="@+id/time"
+            android:text="@string/pune"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sp"
+            android:id="@+id/description"
+            android:text="@string/pune"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/sun_rise"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunrise_time"
+                android:text="@string/pune"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_40sp"
+                android:id="@+id/current_temp"
+                android:text="@string/pune"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sunset_time"
+                android:text="@string/pune"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_gravity="center_vertical"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/sun_set"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/weather_list_view"
-        android:layout_below="@id/city_name"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
