@@ -56,13 +56,16 @@ public class CityFragment extends Fragment {
 
     WeatherAdapter mWeatherAdapter;
 
+    String mInputCityName;
+
     public CityFragment() {
         // Required empty public constructor
     }
 
 
-    public static CityFragment newInstance() {
+    public static CityFragment newInstance(String newCityName) {
         CityFragment fragment = new CityFragment();
+        fragment.mInputCityName = newCityName;
         return fragment;
     }
 
@@ -85,6 +88,10 @@ public class CityFragment extends Fragment {
 
         mForecastViewModal = ViewModelProviders.of(this).get(ForecastViewModal.class);
         mCurrentWeatherViewModal = ViewModelProviders.of(this).get(WeatherViewModal.class);
+
+        mForecastViewModal.setCityName(mInputCityName);
+        mCurrentWeatherViewModal.setCityName(mInputCityName);
+
         return view;
     }
 

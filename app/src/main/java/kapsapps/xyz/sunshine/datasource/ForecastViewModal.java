@@ -16,11 +16,12 @@ public class ForecastViewModal extends ViewModel {
 
     private MutableLiveData<ForecastModal> mMutableLiveData;
     private ServiceAPI serviceAPI;
-    private String mCityName = "Pune";
+    private String mCityName;
 
 
     public void setCityName(String cityName){
         this.mCityName = cityName;
+        makeServerCall();
     }
 
     public ForecastViewModal(){
